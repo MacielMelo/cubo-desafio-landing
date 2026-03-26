@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Board 3D — Playtest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Roboto+Slab:wght@700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Top App Bar -->
+    <header class="top-bar" id="topBar">
+        <div class="top-bar__inner">
+            <span class="top-bar__logo material-icons-outlined">view_in_ar</span>
+            <span class="top-bar__title">Puzzle Board 3D</span>
+            <a href="#agendar" class="top-bar__action">Agendar</a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero__surface">
+                <!-- Animated board grid background -->
+                <div class="hero__grid" aria-hidden="true">
+                    <div class="grid-board">
+                        <div class="grid-labels grid-labels--cols">
+                            <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+                        </div>
+                        <div class="grid-labels grid-labels--rows">
+                            <span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span>
+                        </div>
+                        <div class="grid-cells">
+                            <span></span><span></span><span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                        <!-- Animated pieces -->
+                        <div class="piece piece--teal piece--1"></div>
+                        <div class="piece piece--pink piece--2"></div>
+                        <div class="piece piece--purple piece--3"></div>
+                        <div class="piece piece--green piece--4"></div>
+                    </div>
+                </div>
+
+                <div class="hero__content">
+                    <span class="hero__chip">
+                        <span class="material-icons-outlined">science</span>
+                        Playtest Aberto
+                    </span>
+                    <h1 class="hero__title">Puzzle Board <span class="hero__title--accent">3D</span></h1>
+                    <p class="hero__subtitle">Um jogo de puzzle estratégico feito com impressão 3D. Encaixe peças no tabuleiro 6×6, use os dados para posicionar e desafie sua mente.</p>
+                    <a href="#agendar" class="btn btn--primary btn--xl">
+                        <span class="material-icons-outlined">event</span>
+                        Agendar Playtest
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- How it works -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Como Funciona</h2>
+                <div class="features__grid">
+                    <div class="card">
+                        <div class="card__icon card__icon--teal">
+                            <span class="material-icons-outlined">grid_on</span>
+                        </div>
+                        <h3 class="card__title">Tabuleiro Matrix</h3>
+                        <p class="card__text">Grade 6×6 com coordenadas de 1–6 e A–F. Cada posição é única e definida pelos dados.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card__icon card__icon--pink">
+                            <span class="material-icons-outlined">extension</span>
+                        </div>
+                        <h3 class="card__title">Peças 3D</h3>
+                        <p class="card__text">Peças impressas em 3D que ocupam ou anulam espaços no tabuleiro. Cada forma é um desafio diferente.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card__icon card__icon--purple">
+                            <span class="material-icons-outlined">casino</span>
+                        </div>
+                        <h3 class="card__title">2 Dados</h3>
+                        <p class="card__text">Dois dados de 6 lados determinam as coordenadas onde as peças devem ser posicionadas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta" id="agendar">
+            <div class="container">
+                <div class="cta__card">
+                    <div class="cta__dice" aria-hidden="true">
+                        <div class="dice dice--1">
+                            <span>B</span>
+                        </div>
+                        <div class="dice dice--2">
+                            <span>4</span>
+                        </div>
+                    </div>
+                    <h2 class="cta__title">Pronto para testar?</h2>
+                    <p class="cta__text">Preencha seus dados e seja um dos primeiros a experimentar o Puzzle Board 3D. Vagas limitadas!</p>
+                    <form class="cta__form" id="leadForm">
+                        <div class="form-field">
+                            <span class="material-icons-outlined form-field__icon">person</span>
+                            <input type="text" id="leadNome" name="nome" placeholder="Seu nome" required autocomplete="name">
+                        </div>
+                        <div class="form-field">
+                            <span class="material-icons-outlined form-field__icon">phone</span>
+                            <input type="tel" id="leadWhatsapp" name="whatsapp" placeholder="WhatsApp (ex: 11 99999-9999)" required autocomplete="tel">
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--xl btn--glow">
+                            <span class="material-icons-outlined">rocket_launch</span>
+                            Quero Participar do Playtest
+                        </button>
+                    </form>
+                    <p class="cta__hint">
+                        <span class="material-icons-outlined">schedule</span>
+                        Entraremos em contato pelo WhatsApp informado.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Puzzle Board 3D. Feito com <span class="material-icons-outlined" style="font-size:inherit;vertical-align:middle;">favorite</span> e impressão 3D.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
