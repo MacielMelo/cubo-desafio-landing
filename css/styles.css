@@ -591,6 +591,22 @@ body {
     justify-content: center;
 }
 
+.cta__success {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 20px;
+    font-size: 1.05rem;
+    color: var(--md-primary-light);
+    font-weight: 500;
+}
+
+.cta__success .material-icons-outlined {
+    font-size: 28px;
+    color: var(--md-primary);
+}
+
 /* ============================
    FOOTER
    ============================ */

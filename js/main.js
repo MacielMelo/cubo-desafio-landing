@@ -29,21 +29,9 @@ revealElements.forEach(el => {
     revealObserver.observe(el);
 });
 
-// Lead form → mailto
-const EMAIL_DESTINO = 'maciel.dev@gamil.com';
-
-document.getElementById('leadForm').addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const nome = document.getElementById('leadNome').value.trim();
-    const whatsapp = document.getElementById('leadWhatsapp').value.trim();
-
-    if (!nome || !whatsapp) return;
-
-    const assunto = encodeURIComponent('Novo Lead — Playtest Puzzle Board 3D');
-    const corpo = encodeURIComponent(
-        `Novo interesse no Playtest!\n\nNome: ${nome}\nWhatsApp: ${whatsapp}`
-    );
-
-    window.location.href = `mailto:${EMAIL_DESTINO}?subject=${assunto}&body=${corpo}`;
-});
+// Mostrar mensagem de sucesso se voltou do FormSubmit
+if (new URLSearchParams(window.location.search).has('enviado')) {
+    const form = document.getElementById('leadForm');
+    form.innerHTML = '<p class="cta__success"><span class="material-icons-outlined">check_circle</span> Cadastro enviado com sucesso! Entraremos em contato pelo WhatsApp.</p>';
+    form.closest('.cta__card').scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
